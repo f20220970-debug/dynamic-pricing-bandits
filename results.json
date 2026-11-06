@@ -1,0 +1,82 @@
+{
+ "rounds": 60000,
+ "seeds": 3,
+ "contexts": 24,
+ "arms": [
+  0.85,
+  0.95,
+  1.05,
+  1.15,
+  1.25
+ ],
+ "oracle_best_price_by_context_type": {
+  "offpeak": [
+   1.05,
+   1.25,
+   0.85,
+   0.85,
+   1.15,
+   1.15,
+   0.85,
+   1.25,
+   1.25,
+   1.25,
+   1.15,
+   0.85
+  ],
+  "peak": [
+   1.25,
+   1.25,
+   1.25,
+   1.25,
+   1.25,
+   1.25,
+   1.25,
+   1.25,
+   1.25,
+   1.25,
+   1.25,
+   1.25
+  ]
+ },
+ "policies": {
+  "Fixed price 1.0": {
+   "pct_of_oracle_contribution": 87.4,
+   "cumulative_regret": 192757,
+   "regret_per_quote_last_10pct": 3.25,
+   "contexts_on_best_price_at_end": 5.6
+  },
+  "A/B test then commit (20%)": {
+   "pct_of_oracle_contribution": 95.4,
+   "cumulative_regret": 72683,
+   "regret_per_quote_last_10pct": 0.67,
+   "contexts_on_best_price_at_end": 45.8
+  },
+  "Epsilon-greedy (10%)": {
+   "pct_of_oracle_contribution": 95.6,
+   "cumulative_regret": 74204,
+   "regret_per_quote_last_10pct": 0.85,
+   "contexts_on_best_price_at_end": 48.6
+  },
+  "UCB1": {
+   "pct_of_oracle_contribution": 91.0,
+   "cumulative_regret": 137252,
+   "regret_per_quote_last_10pct": 1.99,
+   "contexts_on_best_price_at_end": 34.7
+  },
+  "Thompson sampling": {
+   "pct_of_oracle_contribution": 94.5,
+   "cumulative_regret": 89177,
+   "regret_per_quote_last_10pct": 1.24,
+   "contexts_on_best_price_at_end": 50.0
+  },
+  "Linear Thompson sampling (shared model)": {
+   "pct_of_oracle_contribution": 98.4,
+   "cumulative_regret": 28960,
+   "regret_per_quote_last_10pct": 0.41,
+   "contexts_on_best_price_at_end": 62.5
+  }
+ },
+ "regret_cut_vs_ab_Thompson sampling": -22.7,
+ "regret_cut_vs_ab_Linear Thompson sampling (shared model)": 60.2
+}
